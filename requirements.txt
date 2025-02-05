@@ -8,3 +8,4 @@ langchain_ollama==0.2.3
 langchain_text_splitters==0.3.5
 python-dotenv==1.0.1
 Requests==2.32.3
+gpt4all==2.8.2

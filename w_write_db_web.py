@@ -24,7 +24,6 @@ def store_data(query="eCadstar",num_results=2,searcher="duckDuckGo",isLink=0,CHR
         results=query
     else:
         results=get_search(query,searcher,num_results=num_results)  
-
     #WebBased scrapper
     loader = WebBaseLoader(results)
     loader.requests_per_second = 1

@@ -21,7 +21,7 @@ isLink=False
 model="gemma2:latest"
 
 web_rag(input="store_data",query=query,question=question,CHROMA_PATH = CHROMA_PATH,num_results=num_results,searcher=searcher,isLink=isLink,model=model)
-web_rag(input="get_result",query=query,question=question,CHROMA_PATH = CHROMA_PATH,num_results=num_results,searcher=searcher,isLink=isLink,model=model)
+#web_rag(input="get_result",query=query,question=question,CHROMA_PATH = CHROMA_PATH,num_results=num_results,searcher=searcher,isLink=isLink,model=model)
 #time.sleep(5)
 #web_rag(input="delete_chroma",query=query,question=question,CHROMA_PATH = CHROMA_PATH,num_results=num_results,searcher=searcher,isLink=isLink,model=model)
 
