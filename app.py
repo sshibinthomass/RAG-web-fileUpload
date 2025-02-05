@@ -24,10 +24,10 @@ def index():
                 file_path = os.path.join(app.config["UPLOAD_FOLDER"], file.filename)
                 file.save(file_path)
                 saved_files.append(file_path)
-
+        print( user_text, selected_option,selected_input)
         # Call external Python script (pass text, dropdown value, and file paths)
         result = subprocess.run(
-            ["python", "f_script.py", user_text, selected_option,selected_input] + saved_files,
+            ["python", "f_script.py", user_text,selected_input,selected_option] + saved_files,
             capture_output=True,
             text=True
         )
