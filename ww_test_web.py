@@ -20,8 +20,8 @@ isLink=False
 #["mistral:7b", "deepseek-r1:14b", "deepseek-r1:1.5b","deepseek-r1:7b","qwen2.5:7b","gemma2:latest","llama3.1:latest"] 
 model="gemma2:latest"
 
-web_rag(input="store_data",query=query,question=question,CHROMA_PATH = CHROMA_PATH,num_results=num_results,searcher=searcher,isLink=isLink,model=model)
-#web_rag(input="get_result",query=query,question=question,CHROMA_PATH = CHROMA_PATH,num_results=num_results,searcher=searcher,isLink=isLink,model=model)
+#web_rag(input="store_data",query=query,question=question,CHROMA_PATH = CHROMA_PATH,num_results=num_results,searcher=searcher,isLink=isLink,model=model)
+print(web_rag(input="get_result",query=query,question=question,CHROMA_PATH = CHROMA_PATH,num_results=num_results,searcher=searcher,isLink=isLink,model=model))
 #time.sleep(5)
 #web_rag(input="delete_chroma",query=query,question=question,CHROMA_PATH = CHROMA_PATH,num_results=num_results,searcher=searcher,isLink=isLink,model=model)
 

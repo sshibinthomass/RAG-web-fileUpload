@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+import ollama
 import os
 import subprocess
 
@@ -9,7 +10,7 @@ app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
 
 @app.route("/", methods=["GET", "POST"])
 def index():
-    models = ["mistral:7b", "deepseek-r1:14b", "deepseek-r1:1.5b","deepseek-r1:7b","qwen2.5:7b","llama3.1:latest","gemma2:latest"]  # Dropdown choices
+    models = [m["model"] for m in ollama.list()["models"]] # Dropdown choices
     inputs= ["get_result","delete_chroma","delete_data","store_data"]
 
     if request.method == "POST":
@@ -39,7 +40,7 @@ def index():
 # New route for Settings page
 @app.route("/web", methods=["GET", "POST"])
 def web():
-    models = ["mistral:7b", "deepseek-r1:14b", "deepseek-r1:1.5b","deepseek-r1:7b","qwen2.5:7b","llama3.1:latest","gemma2:latest"]  # Dropdown choices
+    models = [m["model"] for m in ollama.list()["models"]] # Dropdown choices
     inputs= ["get_result","store_data","delete_chroma"]
     searcher=["duckDuckGo","google","brave","bing","yahoo","startpage"]
     if request.method == "POST":
